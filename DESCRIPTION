@@ -4,14 +4,15 @@ Version: 0.0.0.9000
 Authors@R: person("Carl", "Aaby", email = "carl.aaby@extrasp.no", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 Depends: R (>= 3.4.0)
-License: What license is it under?
+License:  GPL-3
 Encoding: UTF-8
 LazyData: true
 Suggests: knitr,
-    rmarkdown, maps
+    rmarkdown, testthat
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
 Imports: dplyr, maps, readr, tidyr
+
 
 
 

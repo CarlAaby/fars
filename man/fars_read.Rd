@@ -19,7 +19,3 @@ If the file can not be found, an error message is returned
 \note{
 This is an internal function not to be used from outside the package
 }
-\examples{
-fars_read("accident_2015.csv.bz2")
-
-}

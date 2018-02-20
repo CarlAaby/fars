@@ -18,7 +18,3 @@ This function will make a file name for a given year
 \note{
 This is an internal function not to be used from outside the package
 }
-\examples{
-make_filename(2015)
-
-}

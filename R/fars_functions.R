@@ -4,9 +4,6 @@
 #' This function reads the contents of a csv file.
 #' If the file can not be found, an error message is returned
 #'
-#' @examples
-#' fars_read("accident_2015.csv.bz2")
-#'
 #' @return A data.frame object
 #'
 #' @param filename The name of the file to load
@@ -33,14 +30,11 @@ fars_read <- function(filename) {
 #' @param years A numeric representing the year
 #' @return A string representing a file name
 #'
-#' @examples
-#' make_filename(2015)
-#'
 #'@note This is an internal function not to be used from outside the package
 
 make_filename <- function(year) {
   year <- as.integer(year)
-  sprintf("accident_%d.csv.bz2", year)
+  system.file("extdata", sprintf("accident_%d.csv.bz2", year), package = "fars")
 }
 
 #' Function \code{fars_read_years}
