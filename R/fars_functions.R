@@ -31,7 +31,6 @@ fars_read <- function(filename) {
 #' @return A string representing a file name
 #'
 #'@note This is an internal function not to be used from outside the package
-#'@export
 make_filename <- function(year) {
   year <- as.integer(year)
   system.file("extdata", sprintf("accident_%d.csv.bz2", year), package = "fars")
