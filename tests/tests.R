@@ -1,1 +1,5 @@
-testthat::expect_that(fars_read_years(2011),gives_warning())
+library(fars)
+library(testthat)
+testthat::expect_that(fars::fars_read_years(2013),is_a(class = "list"))
+
+

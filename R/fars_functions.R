@@ -27,11 +27,11 @@ fars_read <- function(filename) {
 #'
 #' This function will make a file name for a given year
 #'
-#' @param years A numeric representing the year
+#' @param year A numeric representing the year
 #' @return A string representing a file name
 #'
 #'@note This is an internal function not to be used from outside the package
-
+#'@export
 make_filename <- function(year) {
   year <- as.integer(year)
   system.file("extdata", sprintf("accident_%d.csv.bz2", year), package = "fars")
@@ -43,13 +43,14 @@ make_filename <- function(year) {
 #' Will return with a warning message, if the year can not be found
 #'
 #' @importFrom dplyr mutate select
+#' @importFrom magrittr %>%
 #'
 #' @param years The specified year
 #'
 #' @return A data frame with number of deaths for each month in the given year
 #'
 #'@note This is an internal function not to be used from outside the package
-
+#'@export
 fars_read_years <- function(years) {
   lapply(years, function(year) {
     file <- make_filename(year)
@@ -79,6 +80,8 @@ fars_read_years <- function(years) {
 #'
 #'@importFrom dplyr bind_rows group_by summarize
 #'@importFrom tidyr spread
+#'@importFrom magrittr %>%
+#'
 #'@export
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)

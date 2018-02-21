@@ -7,7 +7,7 @@
 make_filename(year)
 }
 \arguments{
-\item{years}{A numeric representing the year}
+\item{year}{A numeric representing the year}
 }
 \value{
 A string representing a file name
