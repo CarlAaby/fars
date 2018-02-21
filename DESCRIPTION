@@ -11,7 +11,7 @@ Suggests: knitr,
     rmarkdown, testthat
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
-Imports: dplyr, maps, readr, tidyr
+Imports: dplyr, maps, readr, tidyr, magrittr
 
 
 
